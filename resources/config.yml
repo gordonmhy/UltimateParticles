@@ -1,0 +1,74 @@
+# UltimateParticles Config File
+
+####### Basics  #######
+
+# Enable the particle effects on the whole server?  (Always true, please)
+enable: true
+
+# Default particle?
+# To see the list of available particles, run '/wplist' in your console
+####
+#### Do not insert any value if you do not want default players to have ####
+####
+default-particle: item_265
+
+# How much particles do u want to output?
+# The larger the amplifier, the more lag in your server
+# 4 is recommended by plugin developers
+default-amplifier: 4
+
+# How do you want particles to present for default?
+# Display formats: line, group, spiral
+default-display: line
+
+# What worlds do you want the particles to be disabled?
+disabled-worlds:
+- example_world_name1
+- example_world_name2
+- example_world_name3
+
+# Want to have portal particles appear when a player teleports?
+tp-effects: true
+
+# ANIMATED SPIRAL EFFECTS
+# Want to disable animated spiral effects? (Becomes particles at rest at fixed positions)
+disable-animated-spirals: false
+
+#######  Blood Effect  #######
+
+# Want to enable blood effect on players?
+# Player spray blood when they are damaged.
+enable-blood: true
+
+# What particle type do you want the blood to be?
+# (You can get the list of particles available by typing the command '/wplist' in the server console
+blood-particle: desblock_152
+
+#######  Authentication  #######
+
+# Supported auth plugins: SimpleAuth, EasyAuth
+# Just take effect if one of the above plugins is installed.
+# Disable player's particle effects if player isn't logged in?
+auth-check: true
+
+#######  Economy  #######
+
+# How much money do u want players to pay while they try player's particles?
+# Ignore this if you do not have any economy plugins installed
+try-player-fee: 300
+
+# How much money do u want players to pay while they apply packs to use?
+# Ignore this if you do not have any economy plugins installed
+apply-pack-fee: 2500
+
+#######  VanishNoPacket #######
+
+# Hide particles of vanished players?
+# Ignore it if there isn't VanishNoPacket installed
+hideparticles-vanished: true
+
+#######  DANGEROUS  #######
+
+# Version
+# DO NOT MODIFY THIS!
+v: "4.1.0"

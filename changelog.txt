@@ -1,0 +1,49 @@
+>>>> Changelog of UltimateParticles <<<<
+
+v4.1.0 - by hoyinm14mc
+- Added support for auth plugins, disable effects when logged out. (SimpleAuth/EasyAuth) (Configurable)
+- Dust particle now supports RGB color code. Format: dust_R:G:B e.g. white: dust_255,255,255
+- Fixed game crash upon selecting colorful particle
+- Fixed missing 'spiral' parameter in display cmd
+
+v4.0.2 - by hoyinm14mc
+- Fixed blood command not working
+- Fixed blood effect still working in creative mode
+- Fixed player blood activation status not saving
+
+v4.0.1 - by hoyinm14mc
+- Fixed getInstance() bug
+- Fixed particle ejector not working
+- Fixed blood effect not showing
+- Fixed particle ejector list error
+
+v4.0.0 - by hoyinm14mc
+- Added animated spiral effect! (Can be deactivated in config file)
+- Particle ejector!!
+- Fixed some typos of commands
+
+v3.1.1 - by hoyinm14mc
+- Various bug fixes
+
+v3.1.0 - by hoyinm14mc
+- Temporary disabled the auth-plugin compatibility, because it contains bugs.
+- Merged BloodFX plugin into UltimateParticles. (Currently only supports PLAYERS)
+
+v3.0.0 - by hoyinm14mc
+- Added config file updater. (The config will be reset after update. Old config will be saved as config.yml.old)
+- UltimateParticles is now compatible with almost all PocketMine versions using API 2.0.0
+- Supports PHP7. (PocketMine API 2.0.0) (Doesn't support API version below 2.0.0 anymore) Performance and speed will be highly enhanced.
+- Added dust particle. The particle name that UltimateParticles can read is "dust_{color}". {color}, e.g. red e.g. orange
+- Added option to disable particle effects in certain worlds. (Could be bypassed if the player has permission: walkingparticles.disabledworlds.bypass)
+- Updated the recommended effect amplifier
+- Added '/walkp colors' command. View the list of colors that are available for dust particles.
+- API edition: Added a method called setPlayerParticles(Player $player, array $particles). Add multiple particles at once.
+- Added mobspawn particles. (Amplifier is HIGHLY recommended to be set to 1)
+- Supports Auth plugins (SimpleAuth by PocketMine/EasyAuth by LDX-MCPE). Can disable effects when the player is not authenticated. (Configurable)
+- Exclusive feature: Portal particle appears when player teleports away.
+- Added a display mode: spiral. Try it by the command '/walkp display spiral'
+- If you want default players to not having particle effects, set the default particle to nothing. (Bug fix)
+- Random mode particles have changed from TerrainParticle to colorful DustParticle
+
+v2.2.4 - by hoyinm14mc
+- Added a command for config and data reload.

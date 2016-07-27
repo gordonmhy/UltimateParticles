@@ -1,0 +1,16 @@
+---
+default1:
+- block_90
+- block_7
+- block_8
+- block_10
+default2:
+- item_264
+- item_265
+- item_266
+- item_267
+default3:
+- largeexplode
+- lava
+- angryvillager
+...
