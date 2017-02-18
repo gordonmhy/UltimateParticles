@@ -1,161 +1,22 @@
 name: UltimateParticles
-main: UltimateParticles\UltimateParticles
-api: 2.0.0
-version: 4.1.0
-load: POSTWORLD
+main: hoyinm14mc\ultimateparticles\UltimateParticles
+api: ["2.0.0", "3.0.0-ALPHA3", "3.0.0-ALPHA4"]
+version: Pre-alpha0.1
 author: hoyinm14mc
-softdepend:
-- VanishNP
-- SimpleAuth
-- EasyAuth
 
 commands:
   ultimateparticles:
     usage: /ultimateparticles help
-    permission: ultimateparticles.command
-    description: Main command of UltimateParticles (Non-WalkingParticles stuff)
+    description: Main command of UltimateParticles for effects manupulation
     aliases: ["ultip"]
-  walkp:
-    usage: /walkp help
-    permission: walkingparticles.command.admin
-    description: Admin command of UltimateParticles
-    aliases: ["walkingparticles", "walkp"]
-  wplist:
-    usage: /wplist
-    permission: walkingparticles.command.wplist
-    description: UltimateParticles > Show a list of available particles
-  wpget:
-    usage: /wpget
-    permission: walkingparticles.command.wpget
-    description: UltimateParticles > Show a list of your using particles
-  wppack:
-    usage: /wppack <apply|get|list> <args..>
-    permission: walkingparticles.command.wppack
-    description: Let players to apply/get/list packs using money
-  wptry:
-    usage: /wptry <player>
-    permission: walkingparticles.command.wptry
-    description: Let players to try out a player's particle pack
-  wprand:
-    usage: /wprand
-    permission: walkingparticles.command.wprand
-    description: Toggles your random mode on/off
-    aliases: ["wprandom", "wprandommode", "wprandomshow"]
-  wpitem:
-    usage: /wpitem
-    permission: walkingparticles.command.wpitem
-    description: Toggles your item mode on/off
-    aliases: ["wpitemmode", "wpitemshow"]
-  wpon:
-    usage: /wpon
-    permission: walkingparticles.command.wpon
-    description: Enables your walkp effects
-    aliases: ["wpenable"]
-  wpoff:
-    usage: /wpoff
-    permission: walkingparticles.command.wpoff
-    description: Disables your walkp effects
-    aliases: ["wpdisable"]
-  blood:
-    usage: /blood on|off
-    permission: walkingparticles.command.blood
-    description: Toggles blood effect on/off for you
-    aliases: ["bloodfx"]
-    
+
 permissions:
-  walkingparticles:
+  ultimateparticles.command.ultimateparticles.addparticle:
+    default: op
+    description: Permits players to add particle to their effects
+  ultimateparticles.command.ultimateparticles.removeparticle:
+    default: op
+    description: Permits players to remove particle from their effects
+  ultimateparticles.command.ultimateparticles.getparticles:
     default: true
-  walkingparticles.tpeffect:
-    default: true
-  walkingparticles.try.pay.bypass:
-    default: op
-  walkingparticles.disabledworlds.bypass:
-    default: false
-  ultimateparticles.command:
-    default: op
-    children:
-      ultimateparticles.command.help:
-        default: op
-      ultimateparticles.command.ejector:
-        default: op
-  walkingparticles.command:
-    default: false
-    children:
-      walkingparticles.command.admin:
-        default: op
-        children:
-          walkingparticles.command.admin.help:
-            default: op
-          walkingparticles.command.admin.reload:
-            default: op
-          walkingparticles.command.admin.add:
-            default: op
-          walkingparticles.command.admin.remove:
-            default: op
-          walkingparticles.command.admin.amplifier:
-            default: op
-          walkingparticles.command.admin.display:
-            default: op
-          walkingparticles.command.admin.clear:
-            default: op
-          walkingparticles.command.admin.pack:
-            default: false
-            children:
-              walkingparticles.command.admin.pack.use:
-                default: op
-              walkingparticles.command.admin.pack.create:
-                default: op
-              walkingparticles.command.admin.pack.delete:
-                default: op
-              walkingparticles.command.admin.pack.addp:
-                default: op
-              walkingparticles.command.admin.pack.get:
-                default: op
-              walkingparticles.command.admin.pack.list:
-                default: op
-          walkingparticles.command.admin.try:
-            default: op
-          walkingparticles.command.admin.random:
-            default: op
-          walkingparticles.command.admin.use:
-            default: op
-          walkingparticles.command.admin.set:
-            default: op
-          walkingparticles.command.admin.get:
-            default: op
-          walkingparticles.command.admin.item:
-            default: op
-          walkingparticles.command.admin.list:
-            default: op
-          walkingparticles.command.admin.version:
-            default: true
-          walkingparticles.command.admin.signhelp:
-            default: op
-          walkingparticles.command.admin.on:
-            default: op
-          walkingparticles.command.admin.off:
-            default: op
-      walkingparticles.command.wplist:
-        default: true
-      walkingparticles.command.wpget:
-        default: true
-      walkingparticles.command.wppack:
-        default: true
-      walkingparticles.command.wptry:
-        default: true
-      walkingparticles.command.wprand:
-        default: op
-      walkingparticles.command.wpitem:
-        default: op
-      walkingparticles.command.wpon:
-        default: true
-      walkingparticles.command.wpoff:
-        default: true
-      walkingparticles.command.blood:
-        default: true
-  walkingparticles.sign.toggle:
-    default: true
-  walkingparticles.sign.create:
-    default: op
-  walkingparticles.sign.destroy:
-    default: op
+    description: Permits players to get a list of particles of their effect

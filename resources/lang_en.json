@@ -1,0 +1,11 @@
+{
+  "language": "en",
+  "operation.inGameOnly": "&cThis operation only works in-game!",
+  "operation.noPermission": "&cYou are not permitted to perform this operation!",
+  "operation.parameterInvalid": "&cParameter (%arg%) invalid!",
+  "operation.failure": "&4Operation failed. An error has occured.",
+  "addparticle.success": "You added %particle% particle to your effect!\nAmplifier: %amplifier%\nShape: %shape%\nType: %type%",
+  "removeparticle.particleNotContained": "Your effect does not contain this particle.",
+  "removeparticle.success": "Successfully removed the particle '%particle%' from your effect!",
+  "getparticles.success": "Particles in your effect: \n%list%"
+}

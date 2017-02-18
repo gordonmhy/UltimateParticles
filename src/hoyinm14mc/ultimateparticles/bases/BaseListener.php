@@ -1,8 +1,7 @@
 <?php
-
 /*
  * This file is a part of UltimateParticles.
- * Copyright (C) 2016 hoyinm14mc
+ * Copyright (C) 2017 hoyinm14mc
  *
  * UltimateParticles is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,34 +16,25 @@
  * You should have received a copy of the GNU General Public License
  * along with UltimateParticles. If not, see <http://www.gnu.org/licenses/>.
  */
-namespace UltimateParticles\events;
 
-use pocketmine\Player;
-use pocketmine\event\Cancellable;
-use UltimateParticles\UltimateParticles;
-use UltimateParticles\base\BaseEvent;
+namespace hoyinm14mc\ultimateparticles\bases;
 
-class PlayerSetWPEvent extends BaseEvent implements Cancellable{
+use hoyinm14mc\ultimateparticles\UltimateParticles;
+use pocketmine\event\Listener;
 
-	public static $handlerList = null;
+abstract class BaseListener implements Listener
+{
 
-	private $player;
+    private $plugin;
 
-	private $particle_name;
+    public function __construct(UltimateParticles $plugin)
+    {
+        $this->plugin = $plugin;
+    }
 
-	public function __construct(UltimateParticles $plugin, Player $player, string $particle_name){
-		$this->player = $player;
-		$this->particle_name = $particle_name;
-		parent::__construct($plugin);
-	}
-
-	public function getPlayer(): Player{
-		return $this->player;
-	}
-
-	public function getParticleName(): string{
-		return $this->particle_name;
-	}
+    protected function getPlugin()
+    {
+        return $this->plugin;
+    }
 
 }
-?>
