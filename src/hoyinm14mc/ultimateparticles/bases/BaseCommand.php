@@ -1,8 +1,7 @@
 <?php
-
 /*
  * This file is a part of UltimateParticles.
- * Copyright (C) 2016 hoyinm14mc
+ * Copyright (C) 2017 hoyinm14mc
  *
  * UltimateParticles is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,29 +16,26 @@
  * You should have received a copy of the GNU General Public License
  * along with UltimateParticles. If not, see <http://www.gnu.org/licenses/>.
  */
-namespace UltimateParticles\base;
 
-use UltimateParticles\UltimateParticles;
+namespace hoyinm14mc\ultimateparticles\bases;
 
-abstract class BaseEconomy{
+use hoyinm14mc\ultimateparticles\UltimateParticles;
+use pocketmine\command\CommandExecutor;
+use pocketmine\plugin\PluginBase;
 
-	/**
-	 *
-	 * @var $plugin
-	 */
-	protected $plugin;
+abstract class BaseCommand extends PluginBase implements CommandExecutor
+{
 
-	public function __construct(UltimateParticles $plugin){
-		$this->plugin = $plugin;
-	}
+    protected $plugin;
 
-	public final function getPlugin(){
-		return $this->plugin;
-	}
+    public function __construct(UltimateParticles $plugin)
+    {
+        $this->plugin = $plugin;
+    }
 
-	public final function getConfig(){
-		return $this->getPlugin()->getConfig();
-	}
+    public function getPlugin(): UltimateParticles
+    {
+        return $this->plugin;
+    }
 
 }
-?>
